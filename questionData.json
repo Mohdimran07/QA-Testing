@@ -1,0 +1,8 @@
+[
+    {"id": 1, "question": "2+3", "answer": "5"},
+    {"id": 2, "question": "4+4", "answer": "8", "options": ["2","4","6","8"]},
+    {"id": 3, "question": "what is the value of pie", "answer": ["3.142", "22/7"], "option": ["3.142","4","22/7","3"]},
+    {"id": 4, "question": "Is 4 > 2", "answer": "yes", "option": ["no", "yes"]},
+    {"id": 5, "question": "question 5", "answer": [], "option": []}
+
+]

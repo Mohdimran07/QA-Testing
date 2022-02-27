@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import CandidateInfo from "./Pages/CandidateInfo";
+import QuestionPaper from "./Pages/QuestionPaper";
+import Result from "./Pages/Result";
+import NotFound from "./Pages/NotFound";
+import { Box } from "@mui/system";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+         <Box
+        sx={{
+          bgcolor: "red",
+          width: "100%",
+          margin: "10px",
+          fontSize: "80px",
+        }}
+      >
+        <Link to="/">
+          <Box sx={{ color: "white" }}>Question App</Box>
+        </Link>
+      </Box>
+      <Routes>
+        <Route path="/" element={ <CandidateInfo></CandidateInfo> }></Route>
+        <Route path="question/:id" element={<QuestionPaper />}></Route>
+        <Route path="result" element={<Result /> }></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
     </div>
   );
 }
