@@ -14,7 +14,7 @@ const Result = () => {
   };
 
   questionData.map((item: any) => {
-    return item.id === 5
+    return item.id === 4 
       ? JSON.stringify(localState[item.id - 1].sort()) ===
           JSON.stringify(item?.answer.sort()) && incrementTotal()
       : JSON.stringify(localState[item.id -1]) ===
@@ -29,7 +29,7 @@ const Result = () => {
 
       {questionData.map((question: any) => {
         isAnswerdRight =
-          question.id == 5 &&
+          question.id == 4 &&
           JSON.stringify(question.answer.sort()) ===
             JSON.stringify(localState[question.id - 1].sort())
             ? true
