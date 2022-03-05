@@ -13,7 +13,7 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CandidateInfo = () => {
+const CandidateInfo = (): JSX.Element => {
   const navigate = useNavigate();
   const [value, setValue] = useState<string>("");
 
